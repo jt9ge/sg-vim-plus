@@ -1,0 +1,7 @@
+/node_modules
+.git
+dump.rdb
+web.config
+.idea/
+.DS_Store
+.vscode/
