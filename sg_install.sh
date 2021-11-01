@@ -6,7 +6,7 @@ mkdir -p ~/.vim/plugged
 touch ~/.vimrc
 
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-if [ ! -d "~/.vim/plugged/molokai/colors" ]; then
+if [ ! -d "${HOME}/.vim/plugged/molokai/colors" ]; then
     git clone https://github.com/tomasr/molokai.git --depth=1 ~/.vim/plugged/molokai
 fi
 
