@@ -12,6 +12,6 @@ fi
 
 # 不管存在不，先删除再说.
 rm -f ~/.vimrc
-curl https://github.com/jt9ge/sg-vim-plus/blob/main/default.vimrc -o ~/.vimrc
+curl https://raw.githubusercontent.com/jt9ge/sg-vim-plus/main/default.vimrc -o ~/.vimrc
 
 echo "你好漂亮!"
