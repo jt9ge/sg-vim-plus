@@ -1,6 +1,7 @@
 # 简单好用快捷的vim配置方案
+> 不是最好，但求做更好的vim精巧配置方案.
 
-## 自动安装
+## 自动安装(推荐)
 ```
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/jt9ge/sg-vim-plus/main/sg_install.sh)"
 ```
@@ -12,6 +13,15 @@ chmod +x ./sg_install.sh
 # 安装执行
 ./sg_install.sh
 ```
+
+## 更新.vimrc
+```bash
+# 给执行权限
+chmod +x ./sg_update.sh
+# 安装执行
+./sg_update.sh
+```
+
 
 
 ## FAQ
