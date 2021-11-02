@@ -40,6 +40,9 @@ call plug#end()
     " 搜索正则匹配规则改变 见帮助 :h magic
     set magic
 
+    " 解决退格键，无法触发.
+    set backspace=indent,eol,start
+
     " encoding 文件编码,格式 {
         " 设置文件格式
         set encoding=utf-8
