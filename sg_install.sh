@@ -5,6 +5,23 @@ mkdir -p ~/.vim/autoload
 mkdir -p ~/.vim/plugged
 touch ~/.vimrc
 
+if [ "$EDITOR" = "" ]
+then
+    STR_ZSH_SHELL=`echo $SHELL|grep zsh`
+    STR_FISH_SHELL=`echo $SHELL|grep fish`
+    if [ "$STR_ZSH_SHELL" != "" ]
+    then
+        echo "export EDITOR='`which vim`'" >> "${HOME}/.zshrc"
+    elif [ "$STR_FISH_SHELL" != "" ]
+    then
+        echo "export EDITOR='`which vim`'" >> ${HOME}/.fishrc
+    else
+        echo "export EDITOR='`which vim`'" >> ${HOME}/.bashrc
+    fi
+else
+    echo "found editor env"
+fi
+
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 if [ ! -d "${HOME}/.vim/plugged/molokai/colors" ]; then
     git clone https://github.com/tomasr/molokai.git --depth=1 ~/.vim/plugged/molokai
