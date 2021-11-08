@@ -192,12 +192,12 @@ call plug#end()
     endfun
 
     " 相对行号
-    set relativenumber number
-    autocmd FocusLost * :set norelativenumber number
-    autocmd FocusGained * :set relativenumber
+    " set relativenumber number
+    " autocmd FocusLost * :set norelativenumber number
+    " autocmd FocusGained * :set relativenumber
     " 插入模式下用绝对行号,普通模式下用相对
-    autocmd InsertEnter * :set norelativenumber number
-    autocmd InsertLeave * :set relativenumber
+    " autocmd InsertEnter * :set norelativenumber number
+    " autocmd InsertLeave * :set relativenumber
     function! NumberToggle()
       if(&relativenumber == 1)
         set norelativenumber number
