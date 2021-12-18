@@ -6,7 +6,7 @@
 " :PlugInstall
 
 call plug#begin('~/.vim/plugged')
-Plug 'wadackel/vim-dogrun'
+"Plug 'wadackel/vim-dogrun'
 " molokai主题插件
 Plug 'tomasr/molokai'
 let g:molokai_original = 1
