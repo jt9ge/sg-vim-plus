@@ -17,8 +17,8 @@ then
     then
         echo "export EDITOR=`which vim`" >> ${HOME}/.fishrc
     elif [ "$STR_BASH_SHELL" != "" ]
-        echo "export EDITOR=`which vim`" >> ${HOME}/.bashrc
     then
+        echo "export EDITOR=`which vim`" >> ${HOME}/.bashrc
     else
         echo "export EDITOR=`which vim`" >> ${HOME}/.bashrc
     fi
