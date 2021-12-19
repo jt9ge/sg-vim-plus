@@ -9,14 +9,18 @@ if [ "$EDITOR" = "" ]
 then
     STR_ZSH_SHELL=`echo $SHELL|grep zsh`
     STR_FISH_SHELL=`echo $SHELL|grep fish`
+    STR_BASH_SHELL=`echo $SHELL|grep bash`
     if [ "$STR_ZSH_SHELL" != "" ]
     then
-        echo "export EDITOR='`which vim`'" >> "${HOME}/.zshrc"
+        echo "export EDITOR=`which vim`" >> "${HOME}/.zshrc"
     elif [ "$STR_FISH_SHELL" != "" ]
     then
-        echo "export EDITOR='`which vim`'" >> ${HOME}/.fishrc
+        echo "export EDITOR=`which vim`" >> ${HOME}/.fishrc
+    elif [ "$STR_BASH_SHELL" != "" ]
+        echo "export EDITOR=`which vim`" >> ${HOME}/.bashrc
+    then
     else
-        echo "export EDITOR='`which vim`'" >> ${HOME}/.bashrc
+        echo "export EDITOR=`which vim`" >> ${HOME}/.bashrc
     fi
 else
     echo "found editor env"
